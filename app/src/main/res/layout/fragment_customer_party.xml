@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <android.support.constraint.Guideline
+    android:id="@+id/left_guide"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.15"/>
+
+  <android.support.constraint.Guideline
+    android:id="@+id/right_guide"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_constraintGuide_percent="0.85"/>
+
+  <android.support.design.widget.TextInputLayout
+    android:id="@+id/date_layout"
+    android:layout_height="wrap_content"
+    android:layout_width="0dp"
+    app:hintEnabled="true"
+    app:hintAnimationEnabled="true"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="@id/left_guide"
+    app:layout_constraintEnd_toEndOf="@id/right_guide"
+    app:layout_constraintBottom_toTopOf="@+id/jumper_spinner">
+
+    <android.support.design.widget.TextInputEditText
+      android:hint="Choose a date:"
+      android:id="@+id/date"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"/>
+
+  </android.support.design.widget.TextInputLayout>
+
+  <TextView
+    android:id="@+id/jumper_spinner_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Jumper:"
+    app:layout_constraintStart_toStartOf="@id/left_guide"
+    app:layout_constraintEnd_toEndOf="@id/right_guide"
+    app:layout_constraintBottom_toTopOf="@+id/jumper_spinner"/>
+  <android.support.v7.widget.AppCompatSpinner
+    android:id="@+id/jumper_spinner"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spinner_margin"
+    app:layout_constraintTop_toBottomOf="@id/date_layout"
+    app:layout_constraintStart_toStartOf="@id/left_guide"
+    app:layout_constraintEnd_toEndOf="@id/right_guide"
+    app:layout_constraintBottom_toTopOf="@+id/table_spinner"/>
+
+  <TextView
+    android:id="@+id/table_spinner_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Tables:"
+    app:layout_constraintStart_toStartOf="@id/left_guide"
+    app:layout_constraintEnd_toStartOf="@+id/chair_spinner_title"
+    app:layout_constraintBottom_toTopOf="@+id/table_spinner"/>
+  <android.support.v7.widget.AppCompatSpinner
+    android:id="@+id/table_spinner"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spinner_margin"
+    app:layout_constraintTop_toBottomOf="@id/jumper_spinner"
+    app:layout_constraintStart_toStartOf="@id/left_guide"
+    app:layout_constraintEnd_toStartOf="@+id/chair_spinner"
+    app:layout_constraintBottom_toBottomOf="parent"/>
+
+  <TextView
+    android:id="@+id/chair_spinner_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Chairs:"
+    app:layout_constraintStart_toEndOf="@id/table_spinner_title"
+    app:layout_constraintEnd_toEndOf="@id/right_guide"
+    app:layout_constraintBottom_toTopOf="@+id/chair_spinner"/>
+  <android.support.v7.widget.AppCompatSpinner
+    android:id="@+id/chair_spinner"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spinner_margin"
+    app:layout_constraintTop_toBottomOf="@id/jumper_spinner"
+    app:layout_constraintStart_toEndOf="@id/table_spinner"
+    app:layout_constraintEnd_toEndOf="@+id/right_guide"
+    app:layout_constraintBottom_toBottomOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

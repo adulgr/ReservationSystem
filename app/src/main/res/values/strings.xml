@@ -1,0 +1,37 @@
+<resources>
+  <string name="app_name">ReservationSystem</string>
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="nav_header_title">adulgr developments</string>
+  <string name="nav_header_subtitle">aHoward1@adulgr.com</string>
+  <string name="nav_header_desc">Navigation header</string>
+  <string name="action_reserve">Reserve</string>
+  <string name="action_settings">Settings</string>
+  <string name="action_logout">Logout</string>
+  <string name="action_book">Book Now</string>
+  <string name="action_contact">Contact</string>
+
+
+  <string-array name="jumper_spinner">
+    <item>Select A Jumper</item>
+    <item>Small Jumper</item>
+    <item>Big Jumper</item>
+    <item>Huge Jumper</item>
+  </string-array>
+  <string-array name="tables_spinner">
+    <item>Select # of Tables</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+  </string-array>
+  <string-array name="chair_spinner">
+    <item>Select # of Chairs</item>
+    <item>10</item>
+    <item>15</item>
+    <item>20</item>
+    <item>25</item>
+    <item>30</item>
+  </string-array>
+</resources>
